@@ -2,8 +2,12 @@ package demo2;
 
 public class Person {
     private String name;
-    private String officeAreaCode;
     private String officeNumber;
+    private TelephoneNumber telephoneNumber;
+
+    public Person() {
+        this.telephoneNumber = new TelephoneNumber();
+    }
 
     public String getName() {
         return name;
@@ -14,15 +18,15 @@ public class Person {
     }
 
     public String getTelephoneNumber() {
-        return String.format("%s %s", officeAreaCode, officeNumber);
+        return String.format("%s %s", telephoneNumber.getOfficeAreaCode(), officeNumber);
     }
 
     public String getOfficeAreaCode() {
-        return officeAreaCode;
+        return telephoneNumber.getOfficeAreaCode();
     }
 
     public void setOfficeAreaCode(String officeAreaCode) {
-        this.officeAreaCode = officeAreaCode;
+        this.telephoneNumber.setOfficeAreaCode(officeAreaCode);
     }
 
     public String getOfficeNumber() {
