@@ -10,7 +10,7 @@ public class Client {
 
     public static void run(Person person) {
         for (String name : readBasicNames()) {
-            person.getCourses().add(new Course(name, false));
+            person.addCourse(new Course(name, false));
         }
     }
 
