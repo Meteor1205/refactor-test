@@ -1,22 +1,22 @@
 package demo2;
 
 public class TelephoneNumber {
-    private String officeAreaCode;
-    private String officeNumber;
+    private String areaCode;
+    private String number;
 
-    public String getOfficeAreaCode() {
-        return officeAreaCode;
+    public String getAreaCode() {
+        return areaCode;
     }
 
-    public void setOfficeAreaCode(String officeAreaCode) {
-        this.officeAreaCode = officeAreaCode;
+    public void setAreaCode(String areaCode) {
+        this.areaCode = areaCode;
     }
 
-    public String getOfficeNumber() {
-        return officeNumber;
+    public String getNumber() {
+        return number;
     }
 
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
