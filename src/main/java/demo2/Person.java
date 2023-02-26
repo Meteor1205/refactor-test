@@ -2,7 +2,6 @@ package demo2;
 
 public class Person {
     private String name;
-    private String officeNumber;
     private TelephoneNumber telephoneNumber;
 
     public Person() {
@@ -18,7 +17,7 @@ public class Person {
     }
 
     public String getTelephoneNumber() {
-        return String.format("%s %s", telephoneNumber.getOfficeAreaCode(), officeNumber);
+        return String.format("%s %s", telephoneNumber.getOfficeAreaCode(), telephoneNumber.getOfficeNumber());
     }
 
     public String getOfficeAreaCode() {
@@ -30,10 +29,10 @@ public class Person {
     }
 
     public String getOfficeNumber() {
-        return officeNumber;
+        return telephoneNumber.getOfficeNumber();
     }
 
     public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
+        this.telephoneNumber.setOfficeNumber(officeNumber);
     }
 }
