@@ -11,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ClientTest {
 
     List<Bird> birds = List.of(
-            new Bird("EuropeanSwallow_A", "EuropeanSwallow", 1, 50, false),
-            new Bird("AfricanSwallow_A", "AfricanSwallow", 3, 50, true),
-            new Bird("AfricanSwallow_B", "AfricanSwallow", 1, 50, false),
-            new Bird("NorwegianBlueParrot_A", "NorwegianBlueParrot", 1, 50, false),
-            new Bird("NorwegianBlueParrot_B", "NorwegianBlueParrot", 1, 101, true)
+            BirdFactory.createBird(new Bird("EuropeanSwallow_A", "EuropeanSwallow", 1, 50, false)),
+            BirdFactory.createBird(new Bird("AfricanSwallow_A", "AfricanSwallow", 3, 50, true)),
+            BirdFactory.createBird(new Bird("AfricanSwallow_B", "AfricanSwallow", 1, 50, false)),
+            BirdFactory.createBird(new Bird("NorwegianBlueParrot_A", "NorwegianBlueParrot", 1, 50, false)),
+            BirdFactory.createBird(new Bird("NorwegianBlueParrot_B", "NorwegianBlueParrot", 1, 101, true))
     );
 
     @Test

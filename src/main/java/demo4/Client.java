@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 public class Client {
     public static void main(String[] args) {
         List<Bird> birds = List.of(
-                new Bird("EuropeanSwallow_A", "EuropeanSwallow", 1, 50, false),
-                new Bird("AfricanSwallow_A", "AfricanSwallow", 3, 50, true),
-                new Bird("AfricanSwallow_B", "AfricanSwallow", 1, 50, false),
-                new Bird("NorwegianBlueParrot_A", "NorwegianBlueParrot", 1, 50, false),
-                new Bird("NorwegianBlueParrot_B", "NorwegianBlueParrot", 1, 101, true)
+                BirdFactory.createBird(new Bird("EuropeanSwallow_A", "EuropeanSwallow", 1, 50, false)),
+                BirdFactory.createBird(new Bird("AfricanSwallow_A", "AfricanSwallow", 3, 50, true)),
+                BirdFactory.createBird(new Bird("AfricanSwallow_B", "AfricanSwallow", 1, 50, false)),
+                BirdFactory.createBird(new Bird("NorwegianBlueParrot_A", "NorwegianBlueParrot", 1, 50, false)),
+                BirdFactory.createBird(new Bird("NorwegianBlueParrot_B", "NorwegianBlueParrot", 1, 101, true))
         );
         Map<String, String> plumages = plumages(birds);
         Map<String, Integer> speeds = speeds(birds);
@@ -24,7 +24,7 @@ public class Client {
     }
 
     public static String plumage(Bird bird) {
-        return BirdFactory.createBird(bird).plumage();
+        return bird.plumage();
     }
 
     public static Map<String, Integer> speeds(List<Bird> birds) {
@@ -32,6 +32,6 @@ public class Client {
     }
 
     public static Integer airSpeedVelocity(Bird bird) {
-        return BirdFactory.createBird(bird).airSpeedVelocity();
+        return bird.airSpeedVelocity();
     }
 }
