@@ -24,16 +24,7 @@ public class Client {
     }
 
     public static String plumage(Bird bird) {
-        switch (bird.getType()) {
-            case "EuropeanSwallow":
-                return "average";
-            case "AfricanSwallow":
-                return (bird.getNumberOfCoconut() > 2) ? "tired" : "average";
-            case "NorwegianBlueParrot":
-                return (bird.getVoltage() > 100) ? "scorched" : "beautiful";
-            default:
-                return "unknown";
-        }
+        return bird.plumage();
     }
 
     public static Map<String, Integer> speeds(List<Bird> birds) {
@@ -41,15 +32,6 @@ public class Client {
     }
 
     public static Integer airSpeedVelocity(Bird bird) {
-        switch (bird.getType()) {
-            case "EuropeanSwallow":
-                return 35;
-            case "AfricanSwallow":
-                return 40 - 2 * bird.getNumberOfCoconut();
-            case "NorwegianBlueParrot":
-                return (bird.isNailed()) ? 0 : 10 + bird.getVoltage() / 10;
-            default:
-                return null;
-        }
+        return bird.airSpeedVelocity();
     }
 }

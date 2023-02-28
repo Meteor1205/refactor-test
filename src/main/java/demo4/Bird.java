@@ -15,6 +15,32 @@ public class Bird {
         this.isNailed = isNailed;
     }
 
+    public String plumage() {
+        switch (this.getType()) {
+            case "EuropeanSwallow":
+                return "average";
+            case "AfricanSwallow":
+                return (this.getNumberOfCoconut() > 2) ? "tired" : "average";
+            case "NorwegianBlueParrot":
+                return (this.getVoltage() > 100) ? "scorched" : "beautiful";
+            default:
+                return "unknown";
+        }
+    }
+
+    public Integer airSpeedVelocity() {
+        switch (this.getType()) {
+            case "EuropeanSwallow":
+                return 35;
+            case "AfricanSwallow":
+                return 40 - 2 * this.getNumberOfCoconut();
+            case "NorwegianBlueParrot":
+                return (this.isNailed()) ? 0 : 10 + this.getVoltage() / 10;
+            default:
+                return null;
+        }
+    }
+
     public String getName() {
         return name;
     }
