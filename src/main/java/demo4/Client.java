@@ -24,7 +24,7 @@ public class Client {
     }
 
     public static String plumage(Bird bird) {
-        return bird.plumage();
+        return BirdFactory.createBird(bird).plumage();
     }
 
     public static Map<String, Integer> speeds(List<Bird> birds) {
@@ -32,6 +32,6 @@ public class Client {
     }
 
     public static Integer airSpeedVelocity(Bird bird) {
-        return bird.airSpeedVelocity();
+        return BirdFactory.createBird(bird).airSpeedVelocity();
     }
 }

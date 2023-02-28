@@ -15,6 +15,14 @@ public class Bird {
         this.isNailed = isNailed;
     }
 
+    public Bird(Bird bird) {
+        this.name = bird.name;
+        this.type = bird.type;
+        this.numberOfCoconut = bird.numberOfCoconut;
+        this.voltage = bird.voltage;
+        this.isNailed = bird.isNailed;
+    }
+
     public String plumage() {
         switch (this.getType()) {
             case "EuropeanSwallow":
