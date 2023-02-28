@@ -18,6 +18,8 @@ public class Client {
         double totalSalary = 0;
         for (Person p : people) {
             if (p.getAge() < youngest) youngest = p.getAge();
+        }
+        for (Person p : people) {
             totalSalary += p.getSalary();
         }
         return String.format("youngestAge: %s, totalSalary: %s;", youngest, totalSalary);
