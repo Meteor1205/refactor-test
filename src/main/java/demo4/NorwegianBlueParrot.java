@@ -9,4 +9,9 @@ public class NorwegianBlueParrot extends Bird {
     public String plumage() {
         return (this.getVoltage() > 100) ? "scorched" : "beautiful";
     }
+
+    @Override
+    public Integer airSpeedVelocity() {
+        return (this.isNailed()) ? 0 : 10 + this.getVoltage() / 10;
+    }
 }

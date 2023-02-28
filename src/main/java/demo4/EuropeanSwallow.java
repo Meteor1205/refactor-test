@@ -9,4 +9,9 @@ public class EuropeanSwallow extends Bird {
     public String plumage() {
         return "average";
     }
+
+    @Override
+    public Integer airSpeedVelocity() {
+        return 35;
+    }
 }

@@ -29,16 +29,7 @@ public class Bird {
     }
 
     public Integer airSpeedVelocity() {
-        switch (this.getType()) {
-            case "EuropeanSwallow":
-                return 35;
-            case "AfricanSwallow":
-                return 40 - 2 * this.getNumberOfCoconut();
-            case "NorwegianBlueParrot":
-                return (this.isNailed()) ? 0 : 10 + this.getVoltage() / 10;
-            default:
-                return null;
-        }
+        return null;
     }
 
     public String getName() {
