@@ -1,6 +1,7 @@
 package demo4;
 
 public class Bird {
+    public static final String UNKNOWN = "unknown";
     private String name;
     private String type;
     private int numberOfCoconut;
@@ -24,16 +25,7 @@ public class Bird {
     }
 
     public String plumage() {
-        switch (this.getType()) {
-            case "EuropeanSwallow":
-                return "average";
-            case "AfricanSwallow":
-                return (this.getNumberOfCoconut() > 2) ? "tired" : "average";
-            case "NorwegianBlueParrot":
-                return (this.getVoltage() > 100) ? "scorched" : "beautiful";
-            default:
-                return "unknown";
-        }
+        return UNKNOWN;
     }
 
     public Integer airSpeedVelocity() {
